@@ -13,7 +13,6 @@ def solution(arr,value):
         if arr[m]>value:
             s=m+1
         else:
-            return s
             e=m-1
 
 
