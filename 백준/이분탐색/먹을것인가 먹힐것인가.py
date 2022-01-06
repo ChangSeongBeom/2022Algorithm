@@ -10,10 +10,11 @@ def solution(arr,value):
     while s<=e:
         m=(s+e)//2
 
-        if arr[m]>value:
-            s=m+1
-        else:
+        if arr[m]>=value:
             e=m-1
+        else:
+            s=m+1
+    return m
 
 
 
@@ -22,8 +23,7 @@ for _ in range(T):
     arr1=list(map(int,sys.stdin.readline().split()))
     arr2=list(map(int,sys.stdin.readline().split()))
     arr1.sort()
-    print(arr1,arr2)
     re=0
     for value in arr2:
         print(solution(arr1,value))
-    print(re)
+
