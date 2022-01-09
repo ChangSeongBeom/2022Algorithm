@@ -1,20 +1,18 @@
-import sys
-
-tmp=input()
-stack=[]
-re=[]
-for i in range(0,len(tmp)):
-    if tmp[i]=='<':
-        re.append(''.join(stack))
-        stack.clear()
-        stack.append(tmp[i])
-    elif tmp[i]=='>':
-        stack.append(tmp[i])
-        re.append(''.join(stack))
-        stack.clear()
-    else:
-        if stack:
-            re.apend(tmp[i])
-        else:
-            
-print(''.join(re))
+# #https://www.acmicpc.net/problem/17413
+# import sys
+#
+# tmp=sys.stdin.readline().rstrip()
+# stack=[]
+# strstack=[]
+#
+# for value in tmp:
+#     if value=='<':
+#         stack.append(value)
+#     elif value == '>':
+#         stack.append(value)
+#         print(''.join(stack))
+#         stack.clear()
+#     else:
+#         if stack:
+#             stack.append(value)
+#         else:
