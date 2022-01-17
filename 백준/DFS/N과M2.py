@@ -3,12 +3,22 @@ import sys
 N,M=map(int,sys.stdin.readline().split())
 result=[]
 
+def chk():
+    flag=True
+    for i in range(0,len(result)-1):
+        if result[i]>=result[i-1]:
+            flag=False
+    return flag
+
 def dfs(start):
     if len(result)==M:
-        print(result)
-    else:
-        for i in range(start,N+1):
+        if chk()==True:
+            print(result)
+            return
+    for i in range(1,N+1):
+        if i not in result:
             result.append(i)
-            dfs(start+1)
+            dfs(i+1)
             result.pop()
-dfs(1)
+
+dfs(0)
