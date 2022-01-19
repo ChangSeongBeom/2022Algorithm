@@ -11,6 +11,6 @@ def dfs(start):
     else:
         for i in range(start,N+1):
             result.append(i)
-            dfs(start+1)
+            dfs(i)
             result.pop()
 dfs(1)
