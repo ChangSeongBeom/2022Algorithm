@@ -7,11 +7,23 @@ for _ in range(N):
     arrList.append(tmp)
 
 arrList.sort()
-testList=[i for i in range(arrList[0]+1)]
-start=0
-end=len(testList)
 
-while start<=end:
-    mid=(start+end)//2
+lt=1
+rt=max(arrList)
 
-    if mid==
+maxValue=-1
+res=0
+
+while lt<=rt:
+    cnt=0
+    mid=(lt+rt)//2
+
+    for x in arrList:
+        cnt+=x//mid
+
+    if cnt>=M :
+        lt=mid+1
+
+    else:
+        rt=mid-1
+print(rt)
